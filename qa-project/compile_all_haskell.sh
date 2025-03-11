@@ -6,7 +6,7 @@ for dir in answers/q*; do
   number="${dir#answers/q}"
 
   # Haskellファイルをコンパイル
-  ghc "$dir/q$number.hs"
+  ghc "$dir/q$number.hs" -o $dir/q$number
 
   # コンパイルが成功したか確認
   if [ $? -eq 0 ]; then
